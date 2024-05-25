@@ -1,6 +1,8 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
 
 android {
+    namespace = 'com.stringee.widget'
     lintOptions {
         abortOnError false
     }
@@ -11,7 +13,6 @@ android {
     }
 
     compileSdkVersion 33
-    buildToolsVersion '30.0.3'
 
     packagingOptions {
         exclude 'META-INF/LICENSE.txt'
@@ -28,16 +29,29 @@ android {
     }
 }
 
+publishing {
+    publications {
+        bar(MavenPublication) {
+            groupId = 'com.android.widget'
+            artifactId = 'com.android.widget'
+            version = '0.0.1'
+            artifact("$buildDir/outputs/aar/stringee-android-widget-release.aar")
+        }
+    }
+    repositories {
+        maven {
+            name "AndroidWidget"
+            url uri("https://maven.pkg.github.com/AnhNQK/android-call-widget")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_USER")
+                password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+}
+
 dependencies {
     // Stringee SDK
     api fileTree(dir: "libs", include: ["*.jar", "*.aar"])
     implementation 'androidx.appcompat:appcompat:1.4.2'
 }
-
-ext {
-    PUBLISH_GROUP_ID = 'com.stringee.sdk.android'
-    PUBLISH_VERSION = '1.0.9'
-    PUBLISH_ARTIFACT_ID = 'stringee-android-widget'
-}
-
-apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
