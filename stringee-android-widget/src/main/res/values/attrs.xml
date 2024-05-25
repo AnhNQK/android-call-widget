@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@attrs/ScannerView">
+    <declare-styleable name="ScannerOverlayView">
+        <attr name="color" format="color" />
+        <attr name="borderStrokeColor" format="color" />
+        <attr name="widthRatio" format="float" />
+        <attr name="aspectRatio" format="float" />
+        <attr name="borderStrokeWidth" format="float" />
+        <attr name="radius" format="integer" />
+        <attr name="borderType" format="enum">
+            <enum name="round" value="0" />
+            <enum name="oval" value="1" />
+            <enum name="circle" value="2" />
+        </attr>
+        <attr name="dashLength" format="float" />
+    </declare-styleable>
+</resources>

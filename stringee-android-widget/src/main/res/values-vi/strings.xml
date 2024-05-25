@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stringee_call_starting">Đang bắt đầu</string>
+    <string name="stringee_ringing">Đang đổ chuông</string>
+    <string name="stringee_calling">Đang gọi</string>
+    <string name="stringee_connecting">Đang kết nối</string>
+    <string name="stringee_call_started">Đang trong cuộc gọi</string>
+    <string name="stringee_recording_required">Bạn cần cấp quyền để thực hiện cuộc gọi</string>
+    <string name="stringee_call_ended">Đã kết thúc</string>
+    <string name="stringee_busy">Máy bận</string>
+    <string name="stringee_another_device_rejected">Cuộc gọi bị từ chối trên một thiết bị khác</string>
+    <string name="stringee_another_device_ended">Cuộc gọi đã bị kết thúc trên một thiết bị khác</string>
+    <string name="stringee_notification_reject">TỪ CHỐI</string>
+    <string name="stringee_notification_answer">TRẢ LỜI</string>
+    <string name="msg_handled_on_another_device">Cuộc gọi đã được phản hồi trên một thiết bị khác.</string>
+</resources>

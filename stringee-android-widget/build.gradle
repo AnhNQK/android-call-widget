@@ -1,0 +1,43 @@
+apply plugin: 'com.android.library'
+
+android {
+    lintOptions {
+        abortOnError false
+    }
+
+    defaultConfig {
+        targetSdkVersion 33
+        minSdkVersion 16
+    }
+
+    compileSdkVersion 33
+    buildToolsVersion '30.0.3'
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    // Stringee SDK
+    api fileTree(dir: "libs", include: ["*.jar", "*.aar"])
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+}
+
+ext {
+    PUBLISH_GROUP_ID = 'com.stringee.sdk.android'
+    PUBLISH_VERSION = '1.0.9'
+    PUBLISH_ARTIFACT_ID = 'stringee-android-widget'
+}
+
+apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"

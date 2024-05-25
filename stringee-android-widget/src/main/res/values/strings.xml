@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stringee_call_starting">Starting</string>
+    <string name="stringee_ringing">Ringing</string>
+    <string name="stringee_calling">Calling</string>
+    <string name="stringee_connecting">Connecting</string>
+    <string name="stringee_call_started">Started</string>
+    <string name="stringee_recording_required">Permissions must be granted to make a call</string>
+    <string name="stringee_call_ended">Ended</string>
+    <string name="stringee_busy">Busy</string>
+    <string name="stringee_another_device_rejected">This call is rejected from another device</string>
+    <string name="stringee_another_device_ended">This call is ended from another device</string>
+    <string name="stringee_notification_reject">DECLINE</string>
+    <string name="stringee_notification_answer">ANSWER</string>
+    <string name="msg_handled_on_another_device">The call is handled on another device.</string>
+</resources>
